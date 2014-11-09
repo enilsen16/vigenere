@@ -35,14 +35,23 @@ int main(int argc, string argv[])
   int key[strlen(k)-1];
   for (int j = 0, l = strlen(k); j < l; j++)
     {
-      if (isalpha(k[j]))
-        {
-          printf("%c", k[j]);
-        }
+      //Convert each key to its ASCII value
+      //Use the Cesar code to convert it to the correct int in the alphabet
+      //Stick it in the array recursively
+      //Store the array
     }
     printf("\n");
   for (int i = 0, h = strlen(p); i < h; i++)
     {
+      //Increment the array if the charecter is A-z
+      //If not, print the charecter
+      //Use cesar to correctly insert the new ciphered charecters
+      //Print the new message
+      if (isalpha(k[i]))
+        {
+
+
+        }
 
     }
   }
