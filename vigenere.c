@@ -15,6 +15,14 @@ int main(int argc, string argv[])
   string p;
   if (argc == 2)
     {
+      for ( int x = 0; x < strlen(k); x++ )
+        {
+          if (!isalpha(argv[1][x]))
+          {
+            printf("Please enter only charecters\n");
+            return 1;
+          }
+        }
       printf("What message would you like to encrypt?\n");
       p = GetString();
     }
@@ -23,12 +31,18 @@ int main(int argc, string argv[])
       printf("Please only enter one word as the key\n");
       return 1;
     }
-  // for (int j = 0, l = strlen(k); j < l; j++)
-  //   {
-  //
-  //   }
-  // for (int i = 0, h = strlen(p); i < h; i++)
-  //   {
-  //
-  //   }
+
+  int key[strlen(k)-1];
+  for (int j = 0, l = strlen(k); j < l; j++)
+    {
+      if (isalpha(k[j]))
+        {
+          printf("%c", k[j]);
+        }
+    }
+    printf("\n");
+  for (int i = 0, h = strlen(p); i < h; i++)
+    {
+
+    }
   }
