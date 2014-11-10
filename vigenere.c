@@ -39,18 +39,31 @@ int main(int argc, string argv[])
       //Use the Cesar code to convert it to the correct int in the alphabet
       //Stick it in the array recursively
       //Store the array
-    }
-    printf("\n");
+      if (isupper(k[j]))
+        {
+          int L = k[j];
+          printf("%i\n", L);
+        }
+      else if (islower(k[j]))
+        {
+          int l = k[j];
+          printf("%i\n", l);
+        }
+      }
   for (int i = 0, h = strlen(p); i < h; i++)
     {
       //Increment the array if the charecter is A-z
       //If not, print the charecter
       //Use cesar to correctly insert the new ciphered charecters
       //Print the new message
-      if (isalpha(k[i]))
+      if (isalpha(p[i]))
         {
 
 
+        }
+      else
+        {
+          printf("%c",p[i]);
         }
 
     }
