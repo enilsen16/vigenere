@@ -42,11 +42,13 @@ int main(int argc, string argv[])
       if (isupper(k[j]))
         {
           int L = k[j];
+          key[j] = L - 65;
           printf("%i\n", L);
         }
       else if (islower(k[j]))
         {
           int l = k[j];
+          key[j] = l - 97;
           printf("%i\n", l);
         }
       }
