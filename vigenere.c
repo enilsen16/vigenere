@@ -35,23 +35,18 @@ int main(int argc, string argv[])
   int key[strlen(k)-1];
   for (int j = 0, l = strlen(k); j < l; j++)
     {
-      //Convert each key to its ASCII value
-      //Use the Cesar code to convert it to the correct int in the alphabet
-      //Stick it in the array recursively
-      //Store the array
       if (isupper(k[j]))
         {
           int L = k[j];
           key[j] = L - 65;
-          printf("%i\n", L);
         }
       else if (islower(k[j]))
         {
           int l = k[j];
           key[j] = l - 97;
-          printf("%i\n", l);
         }
       }
+  int j = 0;
   for (int i = 0, h = strlen(p); i < h; i++)
     {
       //Increment the array if the charecter is A-z
@@ -60,8 +55,36 @@ int main(int argc, string argv[])
       //Print the new message
       if (isalpha(p[i]))
         {
-
-
+          if (isupper(p[i]))
+          {
+             int m = j % (strlen(k));
+             int L = p[i];
+             int v = L + key[m];
+             if (v > 90)
+            {
+              int num = v - 65;
+              int new_num = num % 26;
+              v = new_num + 65;
+            }
+            char c = v;
+            printf("%c", c);
+            j++;
+          }
+          else if (islower(p[i]))
+            {
+              int m = j % (strlen(k));
+              int l = p[i];
+              int v = l + key[m];
+              if (v > 122)
+                {
+                  int num = v - 97;
+                  int new_num = num % 26;
+                  v = new_num + 97;
+                }
+             char c = v;
+             printf("%c", c);
+            j++;
+            }
         }
       else
         {
@@ -69,4 +92,5 @@ int main(int argc, string argv[])
         }
 
     }
+    printf("\n");
   }
